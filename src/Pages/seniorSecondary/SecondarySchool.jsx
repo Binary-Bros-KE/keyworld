@@ -15,7 +15,7 @@ import {
     Calendar,
 } from "lucide-react"
 import SecondaryGallerySection from "./components/SecondaryGallerySection"
-import CountdownWidget from "./components/CountdownWidget.JSX"
+import CountdownWidget from "./components/CountdownWidget.jsx"
 
 export default function SecondarySchool() {
     const [activePathway, setActivePathway] = useState("stem")
