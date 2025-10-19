@@ -57,9 +57,18 @@ const Navbar = () => {
         { href: "/school-menu", link: 'School Menu' },
       ]
     },
-    { label: 'News', hasDropdown: false, href: '/news' },
-    { label: 'Calendar', hasDropdown: false, href: '/calendar' },
-    { label: 'Contact', hasDropdown: false, href: '/contact' }
+    {
+      label: 'News',
+      hasDropdown: false,
+    },
+    {
+      label: 'Calendar',
+      hasDropdown: false
+    },
+    {
+      label: 'Contact',
+      hasDropdown: false,
+    }
   ];
 
   const topLinks = [
@@ -74,14 +83,32 @@ const Navbar = () => {
     { icon: Youtube, href: '#', color: 'hover:bg-[#FF0000]' },
   ];
 
+  const handleDropdownToggle = (label) => {
+    setActiveDropdown(activeDropdown === label ? null : label);
+  };
+
   const dropdownVariants = {
-    hidden: { opacity: 0, y: -10, transition: { duration: 0.2 } },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.3, ease: 'easeOut' } },
+    hidden: {
+      opacity: 0,
+      y: -10,
+      transition: { duration: 0.2 }
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.3, ease: 'easeOut' }
+    }
   };
 
   const mobileMenuVariants = {
-    hidden: { x: '100%', transition: { duration: 0.3, ease: 'easeInOut' } },
-    visible: { x: 0, transition: { duration: 0.3, ease: 'easeInOut' } },
+    hidden: {
+      x: '100%',
+      transition: { duration: 0.3, ease: 'easeInOut' }
+    },
+    visible: {
+      x: 0,
+      transition: { duration: 0.3, ease: 'easeInOut' }
+    }
   };
 
   return (
@@ -90,23 +117,23 @@ const Navbar = () => {
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-22">
+            {/* Logo and Tagline - Left */}
             <div className="flex items-center space-x-3">
               <div className="flex items-center space-x-2">
                 <div className="w-20 h-20 rounded-sm flex items-center justify-center">
                   <img src="/primary-logo.png" alt="" />
                 </div>
-                <span className="text-gray-500 text-xl font-bold hidden sm:block uppercase">
-                  The Keyworld <br /> School
-                </span>
+                <span className="text-gray-500 text-xl font-bold hidden sm:block uppercase">The Keyworld <br /> School</span>
               </div>
             </div>
+
+            {/* Right Side Links */}
             <div className="flex items-center h-full">
               {topLinks.map((link, index) => (
-                <div
-                  key={index}
-                  className="h-full flex items-center border-l border-r border-gray-200 px-4 text-center hidden md:flex"
-                >
+                <div className='h-full flex items-center border-l border-r border-gray-200 px-4 text-center flex items-center justify-center hidden md:flex'>
+
                   <a
+                    key={index}
                     href={link.href}
                     className="text-gray-600 hover:text-primary transition-colors duration-200 text-lg"
                   >
@@ -123,65 +150,47 @@ const Navbar = () => {
       </div>
 
       {/* Main Navigation */}
-      <nav
-        className={`bg-white sticky top-0 z-50 transition-shadow duration-300 ${
-          scrolled ? 'shadow-md' : 'shadow-sm'
-        }`}
-      >
+      <nav className={`bg-white sticky top-0 z-50 transition-shadow duration-300 ${scrolled ? 'shadow-md' : 'shadow-sm'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
               {navItems.map((item, index) => (
-                <div
-                  key={index}
-                  className="relative group"
-                  onMouseEnter={() => item.hasDropdown && setActiveDropdown(item.label)}
-                  onMouseLeave={() => item.hasDropdown && setActiveDropdown(null)}
-                >
-                  {item.hasDropdown ? (
-                    <button
-                      className="flex items-center space-x-1 text-gray-700 hover:text-primary transition-colors duration-200 py-2 font-medium text-[15px] cursor-pointer"
-                    >
-                      <span>{item.label}</span>
+                <div key={index} className="relative group">
+                  <button
+                    onClick={() => item.hasDropdown && handleDropdownToggle(item.label)}
+                    className="flex items-center space-x-1 text-gray-700 hover:text-primary transition-colors duration-200 py-2 font-medium text-[15px] cursor-pointer"
+                  >
+                    <span>{item.label}</span>
+                    {item.hasDropdown && (
                       <ChevronDown
-                        className={`w-4 h-4 transition-transform duration-200 ${
-                          activeDropdown === item.label ? 'rotate-180' : ''
-                        }`}
+                        className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.label ? 'rotate-180' : ''
+                          }`}
                       />
-                    </button>
-                  ) : (
-                    <a
-                      href={item.href}
-                      className="text-gray-700 hover:text-primary transition-colors duration-200 py-2 font-medium text-[15px]"
-                    >
-                      {item.label}
-                    </a>
-                  )}
+                    )}
+                  </button>
 
                   {/* Dropdown Menu */}
                   <AnimatePresence>
-                    {item.hasDropdown &&
-                      activeDropdown === item.label &&
-                      item.dropdownItems.length > 0 && (
-                        <motion.div
-                          initial="hidden"
-                          animate="visible"
-                          exit="hidden"
-                          variants={dropdownVariants}
-                          className="absolute left-0 top-full mt-1 w-56 bg-white shadow-lg rounded-sm overflow-hidden border border-gray-100"
-                        >
-                          {item.dropdownItems.map((dropItem, dropIndex) => (
-                            <a
-                              key={dropIndex}
-                              href={dropItem.href}
-                              className="block px-6 py-3 text-gray-700 hover:bg-primary hover:text-white transition-all duration-200 border-b border-gray-50 last:border-b-0"
-                            >
-                              {dropItem.link}
-                            </a>
-                          ))}
-                        </motion.div>
-                      )}
+                    {item.hasDropdown && activeDropdown === item.label && item.dropdownItems.length > 0 && (
+                      <motion.div
+                        initial="hidden"
+                        animate="visible"
+                        exit="hidden"
+                        variants={dropdownVariants}
+                        className="absolute left-0 top-full mt-1 w-56 bg-white shadow-lg rounded-sm overflow-hidden border border-gray-100"
+                      >
+                        {item.dropdownItems.map((dropItem, dropIndex) => (
+                          <a
+                            key={dropIndex}
+                            href={dropItem.href}
+                            className="block px-6 py-3 text-gray-700 hover:bg-primary hover:text-white transition-all duration-200 border-b border-gray-50 last:border-b-0"
+                          >
+                            {dropItem.link}
+                          </a>
+                        ))}
+                      </motion.div>
+                    )}
                   </AnimatePresence>
                 </div>
               ))}
@@ -229,12 +238,10 @@ const Navbar = () => {
               <div className="p-6">
                 <div className="flex items-center justify-between mb-8">
                   <div className="flex items-center space-x-2">
-                    <div className="w-20 h-20 flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-sm flex items-center justify-center">
                       <img src="/primary-logo.png" alt="" />
                     </div>
-                    <span className="text-gray-500 text-xl font-bold sm:block uppercase">
-                      The Keyworld <br /> School
-                    </span>
+                    <span className="text-gray-500 text-xl font-bold sm:block uppercase">The Keyworld <br /> School</span>
                   </div>
                   <button
                     onClick={() => setMobileMenuOpen(false)}
@@ -248,55 +255,42 @@ const Navbar = () => {
                 <div className="space-y-2">
                   {navItems.map((item, index) => (
                     <div key={index} className="border-b border-gray-100 pb-2">
-                      {item.hasDropdown ? (
-                        <>
-                          <button
-                            onClick={() =>
-                              setActiveDropdown(
-                                activeDropdown === item.label ? null : item.label
-                              )
-                            }
-                            className="flex items-center justify-between w-full text-gray-700 hover:text-primary transition-colors duration-200 py-3 font-medium"
-                          >
-                            <span>{item.label}</span>
-                            <ChevronDown
-                              className={`w-4 h-4 transition-transform duration-200 ${
-                                activeDropdown === item.label ? 'rotate-180' : ''
+                      <button
+                        onClick={() => item.hasDropdown && handleDropdownToggle(item.label)}
+                        className="flex items-center justify-between w-full text-gray-700 hover:text-primary transition-colors duration-200 py-3 font-medium"
+                      >
+                        <span>{item.label}</span>
+                        {item.hasDropdown && (
+                          <ChevronDown
+                            className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.label ? 'rotate-180' : ''
                               }`}
-                            />
-                          </button>
-                          <AnimatePresence>
-                            {activeDropdown === item.label && (
-                              <motion.div
-                                initial={{ height: 0, opacity: 0 }}
-                                animate={{ height: 'auto', opacity: 1 }}
-                                exit={{ height: 0, opacity: 0 }}
-                                transition={{ duration: 0.2 }}
-                                className="overflow-hidden"
-                              >
-                                <div className="pl-4 space-y-2 pt-2">
-                                  {item.dropdownItems.map((dropItem, dropIndex) => (
-                                    <a
-                                      key={dropIndex}
-                                      href={dropItem.href}
-                                      className="block py-2 text-gray-600 hover:text-primary transition-colors duration-200"
-                                    >
-                                      {dropItem.link}
-                                    </a>
-                                  ))}
-                                </div>
-                              </motion.div>
-                            )}
-                          </AnimatePresence>
-                        </>
-                      ) : (
-                        <a
-                          href={item.href}
-                          className="block py-3 text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
-                        >
-                          {item.label}
-                        </a>
-                      )}
+                          />
+                        )}
+                      </button>
+
+                      <AnimatePresence>
+                        {item.hasDropdown && activeDropdown === item.label && item.dropdownItems.length > 0 && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: 'auto', opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="overflow-hidden"
+                          >
+                            <div className="pl-4 space-y-2 pt-2">
+                              {item.dropdownItems.map((dropItem, dropIndex) => (
+                                <a
+                                  key={dropIndex}
+                                  href="#"
+                                  className="block py-2 text-gray-600 hover:text-primary transition-colors duration-200"
+                                >
+                                  {dropItem}
+                                </a>
+                              ))}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </div>
                   ))}
                 </div>
@@ -325,7 +319,7 @@ const Navbar = () => {
         </AnimatePresence>
       </nav>
 
-      {/* Overlay */}
+      {/* Overlay for mobile menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div

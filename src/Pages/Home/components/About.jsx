@@ -119,61 +119,67 @@ export default function About() {
                 <h3 className="text-lg font-bold text-secondary mb-6 pb-3 border-b-2 border-primary">Quick Links</h3>
                 <div className="space-y-3">
                   <a
-                    href="#"
+                    href="/admission"
                     className="flex items-center justify-between p-3 bg-white hover:bg-primary hover:text-secondary transition-colors rounded group"
                   >
                     <span className="text-sm font-medium text-neutral-700 group-hover:text-secondary">
-                      HOMEWORK PLANS
+                      ADMISSIONS
                     </span>
                     <span className="text-xs bg-info text-white px-2 py-1 rounded">INFO</span>
                   </a>
                   <a
-                    href="#"
+                    href="/pre-school"
                     className="block p-3 bg-white hover:bg-primary hover:text-secondary transition-colors rounded text-sm font-medium text-neutral-700"
                   >
-                    PRACTICAL LIFE IN SCHOOL
+                    PRESCHOOL
                   </a>
                   <a
-                    href="#"
+                    href="/elementary"
                     className="block p-3 bg-white hover:bg-primary hover:text-secondary transition-colors rounded text-sm font-medium text-neutral-700"
                   >
-                    STOP BULLYING NOW
+                    ELEMENTARY
                   </a>
                   <a
-                    href="#"
+                    href="/middle-school"
+                    className="block p-3 bg-white hover:bg-primary hover:text-secondary transition-colors rounded text-sm font-medium text-neutral-700"
+                  >
+                    MIDDLE SCHOOL
+                  </a>
+                  <a
+                    href="/junior-secondary"
                     className="flex items-center justify-between p-3 bg-white hover:bg-primary hover:text-secondary transition-colors rounded group"
                   >
                     <span className="text-sm font-medium text-neutral-700 group-hover:text-secondary">
-                      CHILD ATTENDANCE
+                      JUNIOR SECONDARY
+                    </span>
+                    <span className="text-xs bg-info text-white px-2 py-1 rounded">INFO</span>
+                  </a>
+                  <a
+                    href="/senior-secondary"
+                    className="flex items-center justify-between p-3 bg-white hover:bg-primary hover:text-secondary transition-colors rounded group"
+                  >
+                    <span className="text-sm font-medium text-neutral-700 group-hover:text-secondary">
+                      SENIOR SECONDARY
                     </span>
                     <span className="text-xs bg-accent-green text-white px-2 py-1 rounded">NEW</span>
                   </a>
+
                   <a
-                    href="#"
-                    className="flex items-center justify-between p-3 bg-white hover:bg-primary hover:text-secondary transition-colors rounded group"
-                  >
-                    <span className="text-sm font-medium text-neutral-700 group-hover:text-secondary">
-                      REGISTRATION DOCUMENTS
-                    </span>
-                    <span className="text-xs bg-info text-white px-2 py-1 rounded">INFO</span>
-                  </a>
-                  <a
-                    href="#"
+                    href="/transport"
                     className="block p-3 bg-white hover:bg-primary hover:text-secondary transition-colors rounded text-sm font-medium text-neutral-700"
                   >
-                    BEFORE AND AFTER SCHOOL
-                  </a>
-                  <a
-                    href="#"
-                    className="block p-3 bg-white hover:bg-primary hover:text-secondary transition-colors rounded text-sm font-medium text-neutral-700"
-                  >
-                    LUNCH MENU
+                    SCHOOL TRANSPORT
                   </a>
                 </div>
-                <button className="w-full mt-6 bg-accent-green hover:bg-accent-green-light text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2">
+                <a
+                  href="/KEYWORLD_ACADEMY_FINAL_FEE_STRUCTURE_2021.pdf"
+                  download
+                  className="w-full mt-6 bg-accent-green hover:bg-accent-green-light text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                >
                   <BookOpen size={20} />
-                  Enroll Now
-                </button>
+                  DOWNLOAD FEE STRUCTURE
+                </a>
+
               </div>
             </div>
           </div>

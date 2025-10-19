@@ -1,5 +1,9 @@
+import SecondaryGallerySection from "../seniorSecondary/components/SecondaryGallerySection";
 import About from "./components/About";
 import Curriculum from "./components/Curriculum";
+import HomeBlogSection from "./components/HomeBlogSection";
+import HomeGallerySection from "./components/HomeGallerySection";
+import HomeStorySection from "./components/HomeStorySection";
 
 export default function Home() {
     return (
@@ -18,6 +22,15 @@ export default function Home() {
             </div>
             <About />
             <Curriculum />
+            <HomeStorySection />
+            <HomeBlogSection />
+            <SecondaryGallerySection images={[
+                "/gallery/keyworld-school.png",
+                "/gallery/keyworld-students.jpg",
+                "/gallery/students-in-mosque.jpg",
+                "/gallery/graduation.jpg",
+                "/gallery/keyworld-classes.jpg",
+            ]} />
         </main>
     )
 }

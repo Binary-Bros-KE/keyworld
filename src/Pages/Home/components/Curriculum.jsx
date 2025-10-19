@@ -27,8 +27,8 @@ export default function Curriculum() {
               <h3 className="text-xl font-bold text-secondary mb-3">INQUIRE</h3>
               <div className="text-neutral-600 leading-relaxed space-y-2">
                 <p className="font-semibold">Fedha, Nairobi</p>
-                <p>Email: info@keyworldacademy.ac.ke</p>
-                <p>Phone: +254 XXX XXX XXX</p>
+                <p>Email: admin@keyworldacademy.com</p>
+                <p>Phone: +254 20 800 0932</p>
               </div>
             </div>
 
@@ -41,9 +41,9 @@ export default function Curriculum() {
               <p className="text-neutral-600 leading-relaxed mb-4">
                 Apply online and join our community of inspired, confident, and ready learners.
               </p>
-              <button className="bg-primary hover:bg-primary-hover text-secondary font-semibold px-6 py-2 rounded-lg transition-colors">
+              <a href="/admission" className="bg-primary hover:bg-primary-hover text-secondary font-semibold px-6 py-2 rounded-lg transition-colors">
                 Apply Now
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -65,13 +65,6 @@ export default function Curriculum() {
                 alt="Students in classroom at Keyworld Academy"
                 className="w-full h-[400px] object-cover bg-neutral-200 shadow-lg rounded-lg mb-6"
               />
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, officia, quae earum placeat quidem, quam odio laudantium iure omnis perferendis saepe. Sapiente laboriosam sunt corrupti nihil similique? Consequuntur, non nulla! Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus eum velit tempora aliquam nihil expedita vero id sequi, nam similique, autem maiores animi! Iste consectetur praesentium ratione obcaecati dolor sunt.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, placeat impedit! Officiis adipisci tempore iusto recusandae dolor quis. Neque voluptates voluptatibus facilis optio veniam, ipsa a assumenda facere cum ab.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, esse maiores voluptatibus at eaque repellendus quo harum quam quas tempora vitae et possimus quisquam iusto itaque mollitia ab inventore optio!
-              </p>
             </div>
 
             {/* Subjects Grid */}
