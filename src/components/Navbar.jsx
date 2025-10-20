@@ -207,14 +207,14 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Menu Button */}
-            <div className='w-full flex justify-between items-center'>
+            <div className='lg:hidden w-full flex justify-between items-center'>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="lg:hidden text-gray-700 hover:text-primary transition-colors duration-200"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
-            <h2 className='text-xl font-bold text-secondary'>KEYWORLD SCHOOL</h2>
+            <h2 className='text-xl font-bold text-secondary lg:hidden'>KEYWORLD SCHOOL</h2>
             </div>
           </div>
         </div>
