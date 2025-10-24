@@ -10,21 +10,21 @@ export default function SchoolMenuPage() {
       time: "10:00 AM",
       name: "Morning Tea & Snacks",
       items: ["Fresh Fruit", "Whole Wheat Bread", "Milk", "Biscuits"],
-      image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&h=300&fit=crop",
+      image: "/food/food.jpg",
       nutrition: "Balanced breakfast to energize morning learning",
     },
     {
       time: "12:30 PM",
       name: "Lunch",
       items: ["Protein (Chicken/Fish/Beans)", "Rice/Ugali", "Vegetables", "Salad", "Fruit"],
-      image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&h=300&fit=crop",
+      image: "/food/food-2.jpg",
       nutrition: "Nutritious lunch with balanced macronutrients",
     },
     {
       time: "3:00 PM",
       name: "Afternoon Snack",
       items: ["Juice", "Mandazi", "Samosa", "Fruit", "Yogurt"],
-      image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&h=300&fit=crop",
+      image: "/food/snacks.jpg",
       nutrition: "Energy boost for afternoon activities",
     },
   ]
@@ -219,9 +219,9 @@ export default function SchoolMenuPage() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Questions About Our Menu?</h2>
           <p className="text-lg text-gray-100 mb-6">Contact our nutrition team for more information</p>
-          <button className="bg-[#f4c430] text-[#0d5c3d] px-8 py-3 font-bold hover:bg-[#e0b020] transition-colors">
+          <a href="/contact" className="bg-[#f4c430] text-[#0d5c3d] px-8 py-3 font-bold hover:bg-[#e0b020] transition-colors">
             Contact Us
-          </button>
+          </a>
         </div>
       </section>
     </div>

@@ -13,7 +13,6 @@ export default function ContactPage() {
         message: "",
     })
 
-    const [submitted, setSubmitted] = useState(false)
 
     const handleChange = (e) => {
         const { name, value } = e.target
@@ -23,19 +22,11 @@ export default function ContactPage() {
         }))
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        setSubmitted(true)
-        setTimeout(() => {
-            setFormData({ name: "", email: "", phone: "", subject: "", message: "" })
-            setSubmitted(false)
-        }, 3000)
-    }
 
     return (
         <div className="min-h-screen bg-white">
             <HeroSection
-                backgroundImage="/senior-secondary/keyworld-senior-secondary-gallery-1.png"
+                backgroundImage="/keyworld-academy.jpeg"
                 title="Get In Touch"
                 description="We'd love to hear from you. Contact us today!"
                 breadcrumbs={[
@@ -124,13 +115,7 @@ export default function ContactPage() {
                             Fill out the form below and we'll get back to you as soon as possible.
                         </p>
 
-                        {submitted && (
-                            <div className="mb-8 p-4 bg-accent-green text-white rounded-lg">
-                                Thank you for your message! We'll be in touch soon.
-                            </div>
-                        )}
-
-                        <form onSubmit={handleSubmit} className="space-y-6">
+                        <form action="https://formsubmit.co/info@keyworldacademy.ac.ke" method="POST" className="space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 {/* Name */}
                                 <div>
@@ -211,11 +196,14 @@ export default function ContactPage() {
                             >
                                 Send Message
                             </button>
+
+                            <input type="hidden" name="_next" value="http://keyworldschool.com/success"></input>
+                            <input type="hidden" name="_subject" value="New Admission Request!"></input>
+                            <input type="hidden" name="_captcha" value="false"></input>
                         </form>
 
                         <p className="text-xs text-neutral-500 mt-6 text-center">
-                            This form will be integrated with formsubmit.co for email delivery. Add your email to the form action when
-                            ready.
+                            The content of this form will be submitted to the schools email address.
                         </p>
                     </div>
                 </div>

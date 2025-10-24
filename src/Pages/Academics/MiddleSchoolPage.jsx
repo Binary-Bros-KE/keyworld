@@ -38,11 +38,11 @@ export default function MiddleSchoolPage() {
     <div className="min-h-screen bg-white">
       <HeroSection
         backgroundImage="/about/mission-image.jpg"
-        title="Middle School"
+        title="Primary"
         description="Grades 1-6 | Ages 12-14 | Building Leaders"
         breadcrumbs={[
           { label: "Academics", link: "/pre-school" },
-          { label: "Middle School" }
+          { label: "Primary" }
         ]}
       />
 
@@ -56,7 +56,7 @@ export default function MiddleSchoolPage() {
           >
             <h2 className="text-4xl font-bold text-[#0d5c3d] mb-6">Transition to Excellence</h2>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              Middle School is a critical period of development. Our program bridges elementary and secondary education,
+              Primary is a critical period of development. Our program bridges Pre primary and secondary education,
               preparing students for advanced academics while nurturing their growing independence and leadership
               skills.
             </p>
@@ -67,7 +67,7 @@ export default function MiddleSchoolPage() {
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
             <div className="w-full h-80 bg-gray-200 flex items-center justify-center">
-              <img src="/academics/middle-school/middle-school-1.jpg" alt="Middle school students" className="w-full h-full object-cover" />
+              <img src="/academics/middle-school/middle-school-1.jpg" alt="Primary students" className="w-full h-full object-cover" />
             </div>
           </motion.div>
         </div>
@@ -123,7 +123,7 @@ export default function MiddleSchoolPage() {
       {/* Features */}
       <section className="bg-[#f4c430] bg-opacity-10 py-16">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-[#0d5c3d] mb-12 text-center">Middle School Experience</h2>
+          <h2 className="text-4xl font-bold text-[#0d5c3d] mb-12 text-center">Primary Experience</h2>
           <div className="grid md:grid-cols-4 gap-8">
             {[
               { icon: BookOpen, title: "Advanced Academics", desc: "Rigorous curriculum" },
@@ -150,7 +150,7 @@ export default function MiddleSchoolPage() {
       {/* CTA */}
       <section className="bg-[#0d5c3d] text-white py-16">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Join Our Middle School</h2>
+          <h2 className="text-4xl font-bold mb-6">Join Our Primary</h2>
           <p className="text-xl mb-8">Prepare for secondary school success</p>
           <a
             href="/admission"

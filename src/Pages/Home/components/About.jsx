@@ -134,16 +134,16 @@ export default function About() {
                     PRESCHOOL
                   </a>
                   <a
-                    href="/elementary"
+                    href="/pre-primary"
                     className="block p-3 bg-white hover:bg-primary hover:text-secondary transition-colors rounded text-sm font-medium text-neutral-700"
                   >
-                    ELEMENTARY
+                   Pre primary (PP1 & PP2)
                   </a>
                   <a
-                    href="/middle-school"
+                    href="/primary"
                     className="block p-3 bg-white hover:bg-primary hover:text-secondary transition-colors rounded text-sm font-medium text-neutral-700"
                   >
-                    MIDDLE SCHOOL
+                    Primary (Grade 1-6)
                   </a>
                   <a
                     href="/junior-secondary"

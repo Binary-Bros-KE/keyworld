@@ -40,11 +40,11 @@ export default function ElementaryPage() {
     <div className="min-h-screen bg-white">
       <HeroSection
         backgroundImage="/academics/elementary/elementary-4.jpg"
-        title="Elementary School"
+        title="Pre primary"
         description="PP1, PP2 | Ages 4-12"
         breadcrumbs={[
           { label: "Academics", link: "/pre-school" },
-          { label: "Elementary" }
+          { label: "Pre primary" }
         ]}
       />
 
@@ -58,7 +58,7 @@ export default function ElementaryPage() {
           >
             <h2 className="text-4xl font-bold text-[#0d5c3d] mb-6">Building Strong Foundations</h2>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              Our Elementary program provides a comprehensive, well-rounded education that develops critical thinking,
+              Our Pre primary program provides a comprehensive, well-rounded education that develops critical thinking,
               creativity, and character. Students engage in rigorous academics while developing social-emotional skills.
             </p>
             <p className="text-gray-700 leading-relaxed">
@@ -68,7 +68,7 @@ export default function ElementaryPage() {
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
             <div className="w-full h-80 bg-gray-200 flex items-center justify-center">
-              <img src="/academics/elementary/elementary-1.jpg" alt="Elementary classroom" className="w-full h-full object-cover" />
+              <img src="/academics/elementary/elementary-1.jpg" alt="Pre primary classroom" className="w-full h-full object-cover" />
             </div>
           </motion.div>
         </div>
@@ -137,7 +137,7 @@ export default function ElementaryPage() {
 
       {/* Features */}
       <section className="max-w-6xl mx-auto px-4 py-16">
-        <h2 className="text-4xl font-bold text-[#0d5c3d] mb-12 text-center">Why Elementary at Keyworld</h2>
+        <h2 className="text-4xl font-bold text-[#0d5c3d] mb-12 text-center">Why Pre primary at Keyworld</h2>
         <div className="grid md:grid-cols-4 gap-8">
           {[
             { icon: BookOpen, title: "Comprehensive Curriculum", desc: "Well-rounded education" },
@@ -172,7 +172,7 @@ export default function ElementaryPage() {
       <section className="bg-[#0d5c3d] text-white py-16">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Enroll Your Child Today</h2>
-          <p className="text-xl mb-8">Give them the best elementary education</p>
+          <p className="text-xl mb-8">Give them the best Pre primary education</p>
           <a
             href="/admission"
             className="inline-block bg-[#f4c430] text-[#0d5c3d] px-8 py-3 font-bold hover:bg-opacity-90 transition"

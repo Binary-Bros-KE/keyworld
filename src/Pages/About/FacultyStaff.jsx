@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import HeroSection from "../../components/HeroSection"
 
 export default function FacultyStaff() {
   const fadeInUp = {
@@ -75,15 +76,15 @@ export default function FacultyStaff() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#0d5c3d] to-[#0a4a2f] text-white py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-6 md:px-8">
-          <motion.div {...fadeInUp}>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Faculty & Staff</h1>
-            <p className="text-lg text-gray-100">Meet the dedicated professionals behind Keyworld Academy</p>
-          </motion.div>
-        </div>
-      </section>
+      <HeroSection
+        backgroundImage="/faculty.jpg"
+        title="Faculty & Staff"
+        description="Meet the dedicated professionals behind Keyworld Academy"
+        breadcrumbs={[
+          { label: "About", link: "/our-story" },
+          { label: "Faculty & Staff" }
+        ]}
+      />
 
       {/* Introduction */}
       <section className="py-12 md:py-16 bg-gray-50">

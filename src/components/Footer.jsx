@@ -43,13 +43,13 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="/elementary" className="text-gray-600 hover:text-primary transition-colors text-sm">
-                    Elementary
+                  <a href="/pre-primary" className="text-gray-600 hover:text-primary transition-colors text-sm">
+                    Pre primary (PP1 & PP2)
                   </a>
                 </li>
                 <li>
-                  <a href="/middle-school" className="text-gray-600 hover:text-primary transition-colors text-sm">
-                    Middle School
+                  <a href="/primary" className="text-gray-600 hover:text-primary transition-colors text-sm">
+                   Primary (Grade 1-6)
                   </a>
                 </li>
                 <li>

@@ -26,6 +26,7 @@ import SchoolMenuPage from "./Pages/schoolLife/SchoolMenuPage"
 import ContactPage from "./Pages/Contact/ContactPage"
 import NewsPage from "./Pages/News/NewsPage"
 import BlogDetailPage from "./Pages/News/BlogDetailPage"
+import FormSuccess from "./Pages/success/FormSuccess"
 
 function App() {
 
@@ -48,8 +49,8 @@ function App() {
           <Route path="/faculty" element={<FacultyStaff />} />
 
           <Route path="/pre-school" element={<PreschoolPage />} />
-          <Route path="/elementary" element={<ElementaryPage />} />
-          <Route path="/middle-school" element={<MiddleSchoolPage />} />
+          <Route path="/pre-primary" element={<ElementaryPage />} />
+          <Route path="/primary" element={<MiddleSchoolPage />} />
           <Route path="/junior-secondary" element={<JuniorSecondaryPage />} />
 
           <Route path="/sports" element={<SportsPage />} />
@@ -59,6 +60,8 @@ function App() {
           <Route path="/news" element={<NewsPage />} />
           <Route path="/news/:slug" element={<BlogDetailPage />} />
           <Route path="/contact" element={<ContactPage />} />
+
+          <Route path="/success" element={<FormSuccess />} />
         </Routes>
       </main>
       <Footer />

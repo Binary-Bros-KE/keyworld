@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import HeroSection from "../../components/HeroSection"
 
 export default function OurStory() {
   const fadeInUp = {
@@ -28,15 +29,15 @@ export default function OurStory() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#0d5c3d] to-[#0a4a2f] text-white py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-6 md:px-8">
-          <motion.div {...fadeInUp}>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Story</h1>
-            <p className="text-lg text-gray-100">A journey of excellence and growth</p>
-          </motion.div>
-        </div>
-      </section>
+      <HeroSection
+        backgroundImage="/gallery/graduation-2.jpg"
+        title="Our Story"
+        description="A journey of excellence and growth"
+        breadcrumbs={[
+          { label: "About", link: "/our-story" },
+          { label: "Our story" }
+        ]}
+      />
 
       {/* Story Introduction */}
       <section className="py-16 md:py-24 bg-white">

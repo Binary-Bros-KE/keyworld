@@ -16,20 +16,12 @@ export default function Admissions() {
         message: "",
     })
 
-    const [submitted, setSubmitted] = useState(false)
-
     const handleChange = (e) => {
         const { name, value } = e.target
         setFormData((prev) => ({
             ...prev,
             [name]: value,
         }))
-    }
-
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        setSubmitted(true)
-        setTimeout(() => setSubmitted(false), 3000)
     }
 
     const preAdmissionDocs = [
@@ -205,7 +197,7 @@ export default function Admissions() {
                         </p>
                     </div>
 
-                    <form onSubmit={handleSubmit} className="bg-neutral-50 p-10 shadow-sm">
+                    <form className="bg-neutral-50 p-10 shadow-sm" action="https://formsubmit.co/admin@keyworldacademy.com" method="POST">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                             {/* Student Name */}
                             <div>
@@ -344,21 +336,15 @@ export default function Admissions() {
                             </button>
                         </div>
 
-                        {/* Success Message */}
-                        {submitted && (
-                            <div className="mt-6 bg-accent-green text-white p-4 flex items-center gap-3">
-                                <CheckCircle size={24} />
-                                <p className="font-semibold">Thank you! Your application has been submitted. We'll contact you soon.</p>
-                            </div>
-                        )}
+                        <input type="hidden" name="_next" value="http://keyworldschool.com/success"></input>
+                        <input type="hidden" name="_subject" value="New Admission Request!"></input>
+                        <input type="hidden" name="_captcha" value="false"></input>
                     </form>
 
                     <div className="mt-8 bg-neutral-100 p-6 text-center">
                         <p className="text-neutral-700 mb-3">
-                            <strong>Note:</strong> This form will be integrated with formsubmit.co to send your information directly
-                            to our admissions team.
-                        </p>
-                        <p className="text-sm text-neutral-600">
+                            <strong>Note:</strong>&nbsp;
+                            The content of this form will be delivered to the school's email address <br />
                             For immediate assistance, please call us at +254 20 800 0932 or +254 722 111 805
                         </p>
                     </div>
@@ -373,12 +359,12 @@ export default function Admissions() {
                         Take the first step towards an excellent education. Visit our campus or submit your application today.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button className="bg-secondary hover:bg-secondary-hover text-white font-bold py-3 px-8 transition-colors">
-                            Schedule a Campus Visit
-                        </button>
-                        <button className="bg-white hover:bg-neutral-100 text-primary font-bold py-3 px-8 transition-colors">
+                        <a href="/KEYWORLD_ACADEMY_FINAL_FEE_STRUCTURE_2021.pdf" className="bg-secondary hover:bg-secondary-hover text-white font-bold py-3 px-8 transition-colors">
+                          Download Fee Structure
+                        </a>
+                        <a  href="/brochure.jpeg" className="bg-white hover:bg-neutral-100 text-primary font-bold py-3 px-8 transition-colors">
                             Download Brochure
-                        </button>
+                        </a>
                     </div>
                 </div>
             </section>

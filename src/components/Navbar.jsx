@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { ChevronDown, Menu, X, Twitter, Facebook, Youtube } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaGooglePlusG } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
+import { BsInstagram } from 'react-icons/bs';
 
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -42,8 +44,8 @@ const Navbar = () => {
       hasDropdown: true,
       dropdownItems: [
         { href: "/pre-school", link: 'Preschool' },
-        { href: "/elementary", link: 'Elementary' },
-        { href: "/middle-school", link: 'Middle school' },
+        { href: "/pre-primary", link: 'Pre primary(PP)' },
+        { href: "/primary", link: 'Primary (Grade 1-6)' },
         { href: "/junior-secondary", link: 'Junior Secondary' },
         { href: "/senior-secondary", link: 'Senior Secondary' },
       ]
@@ -69,9 +71,10 @@ const Navbar = () => {
   ];
 
   const socialLinks = [
-    { icon: Twitter, href: '#', color: 'hover:bg-[#1DA1F2]' },
-    { icon: Facebook, href: '#', color: 'hover:bg-[#1877F2]' },
-    { icon: Youtube, href: '#', color: 'hover:bg-[#FF0000]' },
+    { icon: Facebook, href: 'https://www.facebook.com/keyworldacademy', color: 'bg-[#1877F2]' },
+    { icon: FaXTwitter, href: 'https://x.com/keyworldacademy', color: 'bg-[#1DA1F2]' },
+    { icon: BsInstagram, href: 'https://www.instagram.com/keyworld_academy', color: 'bg-pink-600' },
+    { icon: Youtube, href: 'https://www.youtube.com/@keyworldacademy525', color: 'bg-[#FF0000]' },
   ];
 
   const dropdownVariants = {
@@ -114,9 +117,9 @@ const Navbar = () => {
                   </a>
                 </div>
               ))}
-              <button className="ml-4 bg-primary hover:bg-primary-dark text-white px-6 py-1.5 rounded text-lg font-medium transition-all duration-200 hover:shadow-md cursor-pointer">
+              <a href='/admission' className="ml-4 bg-primary hover:bg-primary-dark text-white px-6 py-1.5 rounded text-lg font-medium transition-all duration-200 hover:shadow-md cursor-pointer">
                 ENROLL
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -124,9 +127,8 @@ const Navbar = () => {
 
       {/* Main Navigation */}
       <nav
-        className={`bg-white sticky top-0 z-50 transition-shadow duration-300 ${
-          scrolled ? 'shadow-md' : 'shadow-sm'
-        }`}
+        className={`bg-white sticky top-0 z-50 transition-shadow duration-300 ${scrolled ? 'shadow-md' : 'shadow-sm'
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -145,9 +147,8 @@ const Navbar = () => {
                     >
                       <span>{item.label}</span>
                       <ChevronDown
-                        className={`w-4 h-4 transition-transform duration-200 ${
-                          activeDropdown === item.label ? 'rotate-180' : ''
-                        }`}
+                        className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.label ? 'rotate-180' : ''
+                          }`}
                       />
                     </button>
                   ) : (
@@ -193,28 +194,23 @@ const Navbar = () => {
                 <a
                   key={index}
                   href={social.href}
-                  className={`w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center transition-all duration-200 ${social.color} hover:scale-110`}
+                  target='_blank'
+                  className={`w-9 h-9 rounded-full text-white flex items-center justify-center transition-all duration-200 ${social.color} hover:scale-110`}
                 >
                   <social.icon className="w-4 h-4" />
                 </a>
               ))}
-              <a
-                href="#"
-                className="w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center transition-all duration-200 hover:bg-[#DB4437] hover:scale-110"
-              >
-                <FaGooglePlusG className="w-4 h-4" />
-              </a>
             </div>
 
             {/* Mobile Menu Button */}
             <div className='lg:hidden w-full flex justify-between items-center'>
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden text-gray-700 hover:text-primary transition-colors duration-200"
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-            <h2 className='text-xl font-bold text-secondary lg:hidden'>KEYWORLD SCHOOL</h2>
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="lg:hidden text-gray-700 hover:text-primary transition-colors duration-200"
+              >
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+              <h2 className='text-xl font-bold text-secondary lg:hidden'>KEYWORLD SCHOOL</h2>
             </div>
           </div>
         </div>
@@ -263,9 +259,8 @@ const Navbar = () => {
                           >
                             <span>{item.label}</span>
                             <ChevronDown
-                              className={`w-4 h-4 transition-transform duration-200 ${
-                                activeDropdown === item.label ? 'rotate-180' : ''
-                              }`}
+                              className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.label ? 'rotate-180' : ''
+                                }`}
                             />
                           </button>
                           <AnimatePresence>
@@ -310,17 +305,12 @@ const Navbar = () => {
                     <a
                       key={index}
                       href={social.href}
-                      className={`w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center transition-all duration-200 ${social.color}`}
+                      target='_blank'
+                      className={`w-10 h-10 rounded-full text-white flex items-center justify-center transition-all duration-200 ${social.color}`}
                     >
                       <social.icon className="w-5 h-5" />
                     </a>
                   ))}
-                  <a
-                    href="#"
-                    className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center transition-all duration-200 hover:bg-[#DB4437]"
-                  >
-                    <FaGooglePlusG className="w-5 h-5" />
-                  </a>
                 </div>
               </div>
             </motion.div>

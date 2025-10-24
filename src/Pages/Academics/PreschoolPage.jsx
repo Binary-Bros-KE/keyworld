@@ -121,7 +121,7 @@ export default function PreschoolPage() {
       ]} />
 
       {/* Teachers */}
-      <section className="bg-[#f4c430] bg-opacity-10 py-16">
+      {/* <section className="bg-[#f4c430] bg-opacity-10 py-16">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-4xl font-bold text-[#0d5c3d] mb-12">Our Dedicated Playgroup Teachers</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -145,7 +145,7 @@ export default function PreschoolPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA */}
       <section className="bg-[#0d5c3d] text-white py-16">

@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { X } from "lucide-react"
+import HeroSection from "../../components/HeroSection"
 
 export default function AboutGallery() {
   const [selectedImage, setSelectedImage] = useState(null)
@@ -17,67 +18,67 @@ export default function AboutGallery() {
     {
       title: "School Facilities",
       images: [
-        { id: 1, src: "", alt: "Classroom" },
-        { id: 2, src: "", alt: "Library" },
-        { id: 3, src: "", alt: "Laboratory" },
-        { id: 4, src: "", alt: "Classroom" },
-        { id: 5, src: "", alt: "Library" },
-        { id: 6, src: "", alt: "Laboratory" },
+        { id: 2, src: "/keyworld-academy.jpeg", alt: "Keyworld Academy" },
+        { id: 1, src: "/gallery/classroom.jpg", alt: "Classroom" },
+        { id: 1, src: "/gallery/classroom_2.jpeg", alt: "Classroom 2" },
       ],
     },
     {
       title: "Students & Learning",
       images: [
-        { id: 4, src: "", alt: "Students in class" },
-        { id: 5, src: "", alt: "Group project" },
-        { id: 6, src: "", alt: "Student presentation" },
+        { id: 4, src: "/gallery/keyworld-classes.jpg", alt: "Students in class" },
+        { id: 5, src: "/gallery/projects.jpg", alt: "Group project" },
+        { id: 6, src: "/academics/middle-school/middle-school-1.jpg", alt: "Students on Rooftop" },
       ],
     },
     {
       title: "Sports & Recreation",
       images: [
-        { id: 7, src: "", alt: "Sports day" },
-        { id: 8, src: "", alt: "Football match" },
-        { id: 9, src: "", alt: "Athletics" },
+        { id: 7, src: "/sports/chess.jpg", alt: "Students Playing Chess" },
+        { id: 8, src: "/academics/junior-secondary/junior-secondary-2.jpg", alt: "Football Tuff" },
+        { id: 9, src: "/sports/swimming.jpg", alt: "Swimming" },
       ],
     },
     {
       title: "Meals & Nutrition",
       images: [
-        { id: 10, src: "", alt: "School meals" },
-        { id: 11, src: "", alt: "Dining hall" },
-        { id: 12, src: "", alt: "Healthy nutrition" },
+        { id: 10, src: "/food/food.jpg", alt: "School meals" },
+        { id: 10, src: "/food/snacks.jpg", alt: "School meals" },
+        { id: 10, src: "/food/food-2.jpg", alt: "School meals" },
       ],
     },
     {
       title: "School Bus & Transport",
       images: [
-        { id: 13, src: "", alt: "School bus" },
-        { id: 14, src: "", alt: "Transport fleet" },
-        { id: 15, src: "", alt: "Safe transportation" },
+        { id: 13, src: "/transport/transport-1.jpg", alt: "School bus" },
+        { id: 14, src: "/transport/transport-2.jpeg", alt: "Transport fleet" },
+        { id: 15, src: "/transport/transport-4.jpg", alt: "Safe transportation" },
       ],
     },
     {
       title: "Activities & Events",
       images: [
-        { id: 16, src: "", alt: "School assembly" },
-        { id: 17, src: "", alt: "Cultural event" },
-        { id: 18, src: "", alt: "Prize giving" },
+        { id: 16, src: "/gallery/graduation.jpg", alt: "Graduation" },
+        { id: 16, src: "/gallery/graduation-6.jpg", alt: "Graduation" },
+        { id: 16, src: "/gallery/graduation-2.jpg", alt: "Graduation" },
+        { id: 16, src: "/gallery/graduation-3.jpg", alt: "Graduation" },
+        { id: 16, src: "/gallery/graduation-4.jpg", alt: "Graduation" },
+        { id: 16, src: "/gallery/graduation-5.jpg", alt: "Graduation" },
       ],
     },
   ]
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#0d5c3d] to-[#0a4a2f] text-white py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-6 md:px-8">
-          <motion.div {...fadeInUp}>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Gallery</h1>
-            <p className="text-lg text-gray-100">Explore life at Keyworld Academy</p>
-          </motion.div>
-        </div>
-      </section>
+      <HeroSection
+        backgroundImage="/blog/swimming-classes.png"
+        title="Gallery"
+        description="Explore life at Keyworld Academy"
+        breadcrumbs={[
+          { label: "About", link: "/our-story" },
+          { label: "Gallery" }
+        ]}
+      />
 
       {/* Gallery Sections */}
       <section className="py-16 md:py-24 bg-white">
@@ -105,8 +106,14 @@ export default function AboutGallery() {
               </motion.div>
             ))}
           </div>
+
+          <div className="max-w-7xl mx-auto pt-10">
+            <p className="font-bold text-center text-gray-500">More images on our socials. Visit our Facebook page for more images.</p>
+          </div>
         </div>
       </section>
+
+
 
       {/* Lightbox Modal */}
       {selectedImage && (
@@ -114,7 +121,7 @@ export default function AboutGallery() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/75 z-50 flex items-center justify-center p-4"
           onClick={() => setSelectedImage(null)}
         >
           <motion.div
