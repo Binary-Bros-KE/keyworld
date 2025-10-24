@@ -73,9 +73,9 @@ export default function SecondarySchool() {
                     <div className="mb-6 inline-block px-6 py-2">
                         <CountdownWidget />
                     </div>
-                    <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">Keyworld Senior Secondary School</h1>
+                    <h1 className="text-5xl md:text-7xl font-bold mb-6 max-md:w-70 mx-auto">Keyworld Senior Secondary School</h1>
                     <p className="text-md md:text-xl mb-4 text-white font-bold">Shaping Tomorrow's Leaders, Today</p>
-                    <p className="text-sm md:text-md text-neutral-100 max-w-3xl mx-auto mb-10 leading-relaxed max-md:w-100">
+                    <p className="text-sm md:text-md text-neutral-100 max-w-3xl mx-auto mb-10 leading-relaxed max-md:w-70">
                         A fully equipped institution with state-of-the-art laboratories, workshops, and learning facilities designed
                         to provide an all-round education that prepares learners for excellence in higher education and beyond.
                     </p>

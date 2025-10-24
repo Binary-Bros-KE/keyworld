@@ -81,12 +81,12 @@ export default function CountdownWidget() {
 
     return (
         <div className="mb-6 inline-block">
-            <div className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
+            <div className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 max-md:px-1">
                 <p className="text-primary font-bold text-sm tracking-widest flex items-center gap-2 mb-3 justify-center">
                     <Calendar className="w-5 h-5" />
                     COMING JANUARY 2026
                 </p>
-                <div className="flex items-center gap-4 justify-center">
+                <div className="flex items-center gap-4 justify-center max-md:gap-2">
                     <TimeUnit value={timeLeft.days} label="Days" />
                     <Separator />
                     <TimeUnit value={timeLeft.hours} label="Hours" />
