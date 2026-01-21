@@ -9,7 +9,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Facilities Card */}
             <div className="bg-secondary p-8 rounded-lg text-white hover:bg-secondary-hover transition-colors">
-              <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center mb-6">
                 <GraduationCap size={32} className="text-secondary" />
               </div>
               <h3 className="text-2xl font-bold mb-3">State-of-the-Art Facilities</h3>
@@ -20,8 +20,8 @@ export default function About() {
             </div>
 
             {/* Qualified Tutors Card */}
-            <div className="bg-accent-green p-8 rounded-lg text-white hover:bg-accent-green-light transition-colors">
-              <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
+            <div className="bg-primary p-8 rounded-lg text-white">
+              <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center mb-6">
                 <Users size={32} className="text-secondary" />
               </div>
               <h3 className="text-2xl font-bold mb-3">Qualified Tutors</h3>
@@ -32,12 +32,12 @@ export default function About() {
             </div>
 
             {/* Meals Card */}
-            <div className="bg-primary p-8 rounded-lg text-secondary hover:bg-primary-hover transition-colors">
-              <div className="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center mb-6">
+            <div className="bg-secondary p-8 rounded-lg text-secondary">
+              <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center mb-6">
                 <Utensils size={32} className="text-primary" />
               </div>
-              <h3 className="text-2xl font-bold mb-3">Nutritious Meals</h3>
-              <p className="text-secondary-dark leading-relaxed">
+              <h3 className="text-2xl font-bold mb-3 text-white">Nutritious Meals</h3>
+              <p className="text-white leading-relaxed">
                 Proper nutrition is included in our plans. We provide healthy, balanced meals prepared with care to
                 ensure students have the energy they need to learn and grow.
               </p>

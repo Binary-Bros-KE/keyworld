@@ -73,19 +73,19 @@ export default function SecondarySchool() {
                     <div className="mb-6 inline-block px-6 py-2">
                         <CountdownWidget />
                     </div>
-                    <h1 className="text-5xl md:text-7xl font-bold mb-6 max-md:w-70 mx-auto">Keyworld Senior Secondary School</h1>
+                    <h1 className="text-5xl md:text-7xl font-bold mb-6 max-md:w-70 mx-auto">Keyworld Senior School</h1>
                     <p className="text-md md:text-xl mb-4 text-white font-bold">Shaping Tomorrow's Leaders, Today</p>
                     <p className="text-sm md:text-md text-neutral-100 max-w-3xl mx-auto mb-10 leading-relaxed max-md:w-70">
                         A fully equipped institution with state-of-the-art laboratories, workshops, and learning facilities designed
                         to provide an all-round education that prepares learners for excellence in higher education and beyond.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                        <button className="w-fit bg-primary hover:bg-secondary-hover text-white font-bold py-2 px-8 transition-colors flex items-center justify-center gap-2 rounded-md cursor-pointer">
+                        <a href="/admission" className="w-fit bg-primary hover:bg-secondary-hover text-white font-bold py-2 px-8 transition-colors flex items-center justify-center gap-2 rounded-md cursor-pointer">
                             Secure Your Place <ArrowRight size={20} />
-                        </button>
-                        <button className="w-fit border-2 border-white text-white hover:bg-secondary hover:text-primary font-bold py-2 px-8 transition-colors rounded-md cursor-pointer">
+                        </a>
+                        <a href="/our-story" className="w-fit border-2 border-white text-white hover:bg-secondary hover:text-primary font-bold py-2 px-8 transition-colors rounded-md cursor-pointer">
                             Learn More
-                        </button>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -402,12 +402,12 @@ export default function SecondarySchool() {
                         Excellence. Limited spaces available for our inaugural cohort.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button className="bg-primary hover:bg-primary-dark text-secondary font-bold py-4 px-8 transition-colors flex items-center justify-center gap-2">
+                        <a className="bg-primary hover:bg-primary-dark text-secondary font-bold py-4 px-8 transition-colors flex items-center justify-center gap-2">
                             Apply Now <ArrowRight size={20} />
-                        </button>
-                        <button className="border-2 border-white text-white hover:bg-white hover:text-secondary font-bold py-4 px-8 transition-colors">
-                            Request Information
-                        </button>
+                        </a>
+                        <a href="/keyworld-senior-bronchure.jpeg" className="border-2 border-white text-white hover:bg-white hover:text-secondary font-bold py-4 px-8 transition-colors">
+                            Download Brochure
+                        </a>
                     </div>
                 </div>
             </section>

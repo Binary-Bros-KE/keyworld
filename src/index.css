@@ -3,10 +3,10 @@
 
 @theme {
   /* Primary Colors - Yellow/Gold */
-  --color-primary: #f7c948;
-  --color-primary-light: #ffd966;
-  --color-primary-dark: #e5b534;
-  --color-primary-hover: #f5d875;
+  --color-primary: #fbc552;
+  --color-primary-light: #f7c864;
+  --color-primary-dark: #eeaa18;
+  --color-primary-hover: #fbc552;
 
   /* Secondary Colors - Dark Green */
   --color-secondary: #1a5f3d;

@@ -197,7 +197,7 @@ export default function Admissions() {
                         </p>
                     </div>
 
-                    <form className="bg-neutral-50 p-10 shadow-sm" action="https://formsubmit.co/admin@keyworldacademy.com" method="POST">
+                    <form className="bg-neutral-50 p-10 shadow-sm" action="https://formsubmit.co/keyworldacademy@gmail.com" method="POST">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                             {/* Student Name */}
                             <div>
@@ -292,8 +292,10 @@ export default function Admissions() {
                                     className="w-full px-4 py-3 border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-primary"
                                 >
                                     <option value="">Select class level</option>
-                                    <option value="preschool">Preschool</option>
-                                    <option value="reception">Reception</option>
+                                    <option value="daycare">Daycare</option>
+                                    <option value="playgroup">Playgroup</option>
+                                    <option value="PP1">Pre-primary 1 (PP1)</option>
+                                    <option value="PP2">Pre-primary 2 (PP2)</option>
                                     <option value="grade1">Grade 1</option>
                                     <option value="grade2">Grade 2</option>
                                     <option value="grade3">Grade 3</option>
@@ -302,6 +304,10 @@ export default function Admissions() {
                                     <option value="grade6">Grade 6</option>
                                     <option value="grade7">Grade 7</option>
                                     <option value="grade8">Grade 8</option>
+                                    <option value="grade8">Grade 9</option>
+                                    <option value="grade8">Grade 10</option>
+                                    <option value="grade8">Grade 11</option>
+                                    <option value="grade8">Grade 12</option>
                                 </select>
                             </div>
                         </div>

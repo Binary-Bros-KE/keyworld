@@ -24,7 +24,7 @@ const Navbar = () => {
       hasDropdown: true,
       dropdownItems: [
         { href: "/", link: 'Keyworld Academy' },
-        { href: "/senior-secondary", link: 'Keyworld High School' },
+        { href: "/senior-secondary", link: 'Keyworld Senior School' },
       ]
     },
     {
