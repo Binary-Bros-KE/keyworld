@@ -60,7 +60,6 @@ const Navbar = () => {
       ]
     },
     { label: 'News', hasDropdown: false, href: '/news' },
-    { label: 'Calendar', hasDropdown: false, href: '/calendar' },
     { label: 'Contact', hasDropdown: false, href: '/contact' }
   ];
 
