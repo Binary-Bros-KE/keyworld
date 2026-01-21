@@ -39,7 +39,7 @@ export default function MiddleSchoolPage() {
       <HeroSection
         backgroundImage="/about/mission-image.jpg"
         title="Primary"
-        description="Grades 1-6 | Ages 12-14 | Building Leaders"
+        description="Grades 1-6 | Building Leaders"
         breadcrumbs={[
           { label: "Academics", link: "/pre-school" },
           { label: "Primary" }

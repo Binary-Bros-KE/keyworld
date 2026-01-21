@@ -48,7 +48,7 @@ function App() {
           <Route path="/our-story" element={<OurStory />} />
           <Route path="/faculty" element={<FacultyStaff />} />
 
-          <Route path="/pre-school" element={<PreschoolPage />} />
+          <Route path="/playgroup" element={<PreschoolPage />} />
           <Route path="/pre-primary" element={<ElementaryPage />} />
           <Route path="/primary" element={<MiddleSchoolPage />} />
           <Route path="/junior-secondary" element={<JuniorSecondaryPage />} />

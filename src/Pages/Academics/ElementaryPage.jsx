@@ -41,7 +41,7 @@ export default function ElementaryPage() {
       <HeroSection
         backgroundImage="/academics/elementary/elementary-4.jpg"
         title="Pre primary"
-        description="PP1, PP2 | Ages 4-12"
+        description="PP1, PP2"
         breadcrumbs={[
           { label: "Academics", link: "/pre-school" },
           { label: "Pre primary" }

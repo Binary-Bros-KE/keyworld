@@ -44,7 +44,7 @@ export default function JuniorSecondaryPage() {
       <HeroSection
         backgroundImage="/academics/junior-secondary/junior-secondary-1.jpg"
         title="Junior Secondary School"
-        description="Standards 7-8 | Ages 14-16 | Preparing for Excellence"
+        description="Standards 7-9 | Preparing for Excellence"
         breadcrumbs={[
           { label: "Academics", link: "/pre-school" },
           { label: "Junior Secondary" }

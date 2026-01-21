@@ -43,7 +43,7 @@ const Navbar = () => {
       label: 'Academics',
       hasDropdown: true,
       dropdownItems: [
-        { href: "/pre-school", link: 'Preschool' },
+        { href: "/playgroup", link: 'Playgroup & Daycare' },
         { href: "/pre-primary", link: 'Pre primary(PP)' },
         { href: "/primary", link: 'Primary (Grade 1-6)' },
         { href: "/junior-secondary", link: 'Junior Secondary' },
@@ -93,16 +93,13 @@ const Navbar = () => {
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-22">
-            <div className="flex items-center space-x-3">
+            <a className="flex items-center space-x-3" href="/">
               <div className="flex items-center space-x-2">
                 <div className="w-20 h-20 rounded-sm flex items-center justify-center">
                   <img src="/primary-logo.png" alt="" />
                 </div>
-                <span className="text-gray-500 text-xl font-bold hidden sm:block uppercase">
-                  The Keyworld <br /> School
-                </span>
               </div>
-            </div>
+            </a>
             <div className="flex items-center h-full">
               {topLinks.map((link, index) => (
                 <div

@@ -36,11 +36,11 @@ export default function PreschoolPage() {
     <div className="min-h-screen bg-white">
       <HeroSection
         backgroundImage="/academics/playgroup/playgroup.jpg"
-        title="Preschool (Playgroup)"
-        description="Ages 2-4 | Building Foundations for Lifelong Learning"
+        title="Playgroup & Daycare"
+        description="Building Foundations for Lifelong Learning"
         breadcrumbs={[
-          { label: "Academics", link: "/pre-school" },
-          { label: "Pre-School" }
+          { label: "Academics", link: "/playgroup" },
+          { label: "Playgroup & Daycare" }
         ]}
       />
 
