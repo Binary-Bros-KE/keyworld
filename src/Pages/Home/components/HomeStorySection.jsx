@@ -21,7 +21,7 @@ export default function HomeStorySection() {
             {/* Right Image */}
             <div className="">
               <img
-                src="/home/director.jpg"
+                src="/about/mission-image.jpg"
                 alt="School Director"
                 className=" h-[400px] aspect-3/4 object-cover bg-neutral-300"
               />
